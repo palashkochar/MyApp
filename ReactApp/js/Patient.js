@@ -53,11 +53,12 @@ var PatientVitals = React.createClass({
         
     },
     componentDidMount: function(){
-        document.getElementById("message").style.visibility = "hidden";
+        document.getElementById("message").textContent = "";
     },
     componentWillReceiveProps: function(nextProps) {
         this.getVitalsData(nextProps.patientId);
         this.setState({patientId: nextProps.patientId});
+        this.setState({editing: false});
     },
     getVitalsData: function(patientId){
         var self = this;
@@ -72,6 +73,7 @@ var PatientVitals = React.createClass({
             vitalsData = data;
             self.setState({temperature: vitalsData.temperature});
             self.setState({pulse: vitalsData.pulse});
+            document.getElementById("message").textContent = "";
         });
     },
     edit: function() {
@@ -86,22 +88,32 @@ var PatientVitals = React.createClass({
         vitals.pulse = pulse;
         var url;
         if(testMode){
-            url = "data/patient/vitals/vitals"+this.state.patientId+".json";
+            //url = "data/patient/vitals/vitals"+this.state.patientId+".json";
+            self.setState({editing: false});
+            self.setState({temperature: temperature});
+            self.setState({pulse: pulse});
+            document.getElementById("message").textContent = "Temperature and Pulse saved successfully temprorily!";
         }else{
             url = "patients/vitals/"+this.state.patientId;
+            $.ajax({
+                type:"post",
+                dataType:"json",
+                url: url,
+                data: JSON.stringify(vitals),
+                contentType: "application/json",
+                success: function(data) {
+                    successmessage = 'Data was succesfully saved';
+                    vitalsData = data;
+                    self.setState({editing: false});
+                    self.setState({temperature: vitalsData.temperature});
+                    self.setState({pulse: vitalsData.pulse});
+                    document.getElementById("message").textContent = "Temperature and Pulse saved successfully!";
+                },
+                error: function(data) {
+                    alert('Error');
+                },
+            });
         }
-
-        $.post(url, vitals).done(function(data) {
-            alert( "Data Loaded: ");
-            successmessage = 'Data was succesfully saved';
-            vitalsData = data;
-            self.setState({editing: false});
-            self.setState({temperature: vitalsData.temperature});
-            self.setState({pulse: vitalsData.pulse});
-            document.getElementById("message").style.visibility = "visible";
-        }).fail(function() {
-            alert( "error" );
-        });
     },
     renderDisplay: function() {
         return (
@@ -122,9 +134,9 @@ var PatientVitals = React.createClass({
                 <div className="form-group row">
                   <div className="offset-sm-2 col-sm-10">
                     <button onClick={this.edit} className="btn btn-primary glyphicon glyphicon-pencil"/>
-                    <p id="message">Temperature and Pulse saved successfully!</p>
                   </div>
                 </div>
+                <p id="message"></p>
             </div>
             );
     },
@@ -146,7 +158,7 @@ var PatientVitals = React.createClass({
                 </div>
                 <div className="form-group row">
                   <div className="offset-sm-2 col-sm-10">
-                    <button type="submit" onClick={this.save} className="btn btn-success btn-sm glyphicon glyphicon-floppy-disk" />
+                    <button onClick={this.save} className="btn btn-success btn-sm glyphicon glyphicon-floppy-disk" />
                   </div>
                 </div>
             </div>
