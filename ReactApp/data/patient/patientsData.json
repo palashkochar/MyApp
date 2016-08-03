@@ -1,0 +1,80 @@
+[
+  {
+    "patientId": 1,
+    "firstName": "Bruce",
+    "lastName": "Banner",
+    "town": "Milford",
+    "vitals": {
+      "temperature": 150,
+      "pulse": 98
+    },
+    "medications": [
+      {
+        "id": 1,
+        "medname": "morphine",
+        "dose": "10mg",
+        "startDate": "10/10/15",
+        "stopDate": ""
+      },
+      {
+        "id": 2,
+        "medname": "acetaminophen",
+        "dose": "325mg",
+        "startDate": "10/11/15",
+        "stopDate": "10/14/15"
+      }
+    ]
+  },
+  {
+    "patientId": 2,
+    "firstName": "Tony",
+    "lastName": "Stark",
+    "town": "Arlington",
+    "vitals": {
+      "temperature": 100,
+      "pulse": 74
+    },
+    "medications": [
+      {
+        "id": 3,
+        "medname": "furosemide",
+        "dose": "20mg",
+        "startDate": "10/31/15",
+        "stopDate": ""
+      },
+      {
+        "id": 4,
+        "medname": "morphine",
+        "dose": "15mg",
+        "startDate": "10/11/15",
+        "stopDate": ""
+      },
+      {
+        "id": 5,
+        "medname": "coumadin",
+        "dose": "5mg",
+        "startDate": "10/15/15",
+        "stopDate": ""
+      }
+    ]
+  },
+  {
+    "patientId": 3,
+    "firstName": "Steve",
+    "lastName": "Rogers",
+    "town": "Framingham",
+    "vitals": {
+      "temperature": 98,
+      "pulse": 72
+    },
+    "medications": [
+      {
+        "id": 6,
+        "medname": "lovenox",
+        "dose": "100mg/mL",
+        "startDate": "10/31/15",
+        "stopDate": "11/02/15"
+      }
+    ]
+  }
+]

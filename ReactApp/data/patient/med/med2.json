@@ -1,0 +1,23 @@
+[
+  {
+    "id": 3,
+    "medname": "furosemide",
+    "dose": "20mg",
+    "startDate": "10/31/15",
+    "stopDate": ""
+  },
+  {
+    "id": 4,
+    "medname": "morphine",
+    "dose": "15mg",
+    "startDate": "10/11/15",
+    "stopDate": ""
+  },
+  {
+    "id": 5,
+    "medname": "coumadin",
+    "dose": "5mg",
+    "startDate": "10/15/15",
+    "stopDate": ""
+  }
+]
