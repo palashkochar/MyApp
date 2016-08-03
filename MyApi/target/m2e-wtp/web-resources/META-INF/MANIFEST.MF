@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Implementation-Title: MyApi
+Implementation-Version: 1.2.6.RELEASE
+Built-By: palashkochar
+Implementation-Vendor-Id: me.palash
+Build-Jdk: 1.8.0_72
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+
