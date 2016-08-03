@@ -1,0 +1,70 @@
+[
+  {
+    "id": 1,
+    "lastName": "Stark",
+    "firstName": "Tony",
+    "town": "Arlington",
+    "pulse": 74,
+    "temperature": 99,
+    "medications": [
+      {
+        "id": 1,
+        "medname": "morphine",
+        "dose": "10mg",
+        "startDate": "10/10/15"
+      },
+      {
+        "id": 2,
+        "medname": "acetaminophen",
+        "dose": "325mg",
+        "startDate": "10/11/15",
+        "stopDate": "10/14/15"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "lastName": "Steve",
+    "firstName": "Rogers",
+    "town": "Milford",
+    "pulse": 80,
+    "temperature": 100,
+    "medications": [
+      {
+        "id": 1,
+        "medname": "furosemide",
+        "dose": "20mg",
+        "startDate": "10/31/15"
+      },
+      {
+        "id": 2,
+        "medname": "morphine",
+        "dose": "15mg",
+        "startDate": "10/15/15"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "lastName": "Banner",
+    "firstName": "Bruce",
+    "town": "Framingham",
+    "pulse": 95,
+    "temperature": 110,
+    "medications": [
+      {
+        "id": 1,
+        "medname": "coumadin",
+        "dose": "5mg",
+        "startDate": "10/15/15"
+      },
+      {
+        "id": 2,
+        "medname": "lovenox",
+        "dose": "100mg/mL",
+        "startDate": "10/31/15",
+        "stopDate": "11/02/15"
+      }
+    ]
+  }
+]

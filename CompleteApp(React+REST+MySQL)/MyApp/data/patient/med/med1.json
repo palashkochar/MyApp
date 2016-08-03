@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "medname": "morphine",
+    "dose": "10mg",
+    "startDate": "10/10/15",
+    "stopDate": ""
+  },
+  {
+    "id": 2,
+    "medname": "acetaminophen",
+    "dose": "325mg",
+    "startDate": "10/11/15",
+    "stopDate": "10/14/15"
+  }
+]

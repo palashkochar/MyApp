@@ -1,0 +1,50 @@
+@import url(http://fonts.googleapis.com/css?family=Shadows+Into+Light);
+
+body,
+html,
+div#detailsContainer,
+div#container {
+    height: 100%;
+    overflow: scroll;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #d5d5e2;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.inputField {
+    width: 250px;
+}
+
+.navHeading {
+    text-align: center;
+    color: white;
+}
+
+.navBar {
+    background-color: #40404C;
+    border-color: #40404C;
+    border-radius: 0;
+}
+
+.vitalsForm{
+    clear: both;
+    margin-top: 50px;
+}
+
+/*
+.details {
+    height: 250px;
+    overflow: scroll;
+}*/

@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Implementation-Title: MyApi
+Implementation-Version: 1.2.6.RELEASE
+Archiver-Version: Plexus Archiver
+Built-By: palashkochar
+Start-Class: me.palash.MyApi.Application
+Implementation-Vendor-Id: me.palash
+Spring-Boot-Version: 1.2.6.RELEASE
+Created-By: Apache Maven 3.3.9
+Build-Jdk: 1.8.0_72
+Implementation-Vendor: Pivotal Software, Inc.
+Main-Class: org.springframework.boot.loader.WarLauncher
+
